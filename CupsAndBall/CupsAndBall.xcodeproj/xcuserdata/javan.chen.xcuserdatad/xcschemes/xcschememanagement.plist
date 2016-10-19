@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CupsAndBall WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>CupsAndBall.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AEAD0C241DB76AD80043B8B0</key>
+		<key>AEAD0C851DB7703D0043B8B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEAD0C971DB7703E0043B8B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

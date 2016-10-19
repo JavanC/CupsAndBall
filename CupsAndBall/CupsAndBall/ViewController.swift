@@ -19,7 +19,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    @IBAction func touchUpCup1Button(_ sender: AnyObject) {
+        print("Cup 1")
+    }
+    @IBAction func touchUpCup2Button(_ sender: AnyObject) {
+        print("Cup 2")
+    }
+    @IBAction func touchUpCup3Button(_ sender: AnyObject) {
+        print("Cup 3")
+    }
+  
 }
 
