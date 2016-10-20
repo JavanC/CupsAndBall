@@ -8,29 +8,56 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
-
-class InterfaceController: WKInterfaceController {
-
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    
+    @IBOutlet var cupNumLabel: WKInterfaceLabel!
+    var session : WCSession!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+        if (WCSession.isSupported()) {
+            session = WCSession.default()
+            session.delegate = self
+            session.activate()
+        }
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
-    @IBAction func touchUpShakeButton() {
-        print("Shake")
-        WKInterfaceDevice.current().play(.click)
+    func cupNumChange(cupNum: String) {
+        switch cupNum {
+        case "0":
+            self.cupNumLabel.setText("0")
+        case "1":
+            self.cupNumLabel.setText("1")
+            WKInterfaceDevice.current().play(WKHapticType.retry)
+        case "2":
+            self.cupNumLabel.setText("2")
+        case "3":
+            self.cupNumLabel.setText("3")
+        default:
+            break
+        }
     }
     
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidComplete")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if let value = message["CupNum"] as? String {
+            print("Receive message: \(value)")
+            DispatchQueue.main.async {
+                self.cupNumChange(cupNum: value)
+            }
+        }
+    }
 }

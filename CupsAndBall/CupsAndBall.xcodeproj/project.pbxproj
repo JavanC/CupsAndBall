@@ -126,8 +126,8 @@
 				AEAD0C891DB7703D0043B8B0 /* AppDelegate.swift */,
 				AEAD0C8B1DB7703D0043B8B0 /* ViewController.swift */,
 				AEAD0C8D1DB7703D0043B8B0 /* Main.storyboard */,
-				AEAD0C901DB7703D0043B8B0 /* Assets.xcassets */,
 				AEAD0C921DB7703D0043B8B0 /* LaunchScreen.storyboard */,
+				AEAD0C901DB7703D0043B8B0 /* Assets.xcassets */,
 				AEAD0C951DB7703D0043B8B0 /* Info.plist */,
 			);
 			path = CupsAndBall;
@@ -557,6 +557,7 @@
 				AEAD0CB71DB7703E0043B8B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEAD0CB91DB7703E0043B8B0 /* Build configuration list for PBXNativeTarget "CupsAndBall WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +566,7 @@
 				AEAD0CBB1DB7703E0043B8B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEAD0CBD1DB7703E0043B8B0 /* Build configuration list for PBXNativeTarget "CupsAndBall" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +575,7 @@
 				AEAD0CBF1DB7703E0043B8B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -37,15 +37,23 @@
                                     <action selector="touchUpCup3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kTD-Qa-DlM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-v3-iHq">
+                                <state key="normal" title="No Cup"/>
+                                <connections>
+                                    <action selector="touchUpNoCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1j-jT-u0g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="72f-Ea-WQm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1rF-Zj-qPQ"/>
                             <constraint firstItem="72f-Ea-WQm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K8q-4A-veh"/>
                             <constraint firstItem="HnZ-dR-5Qg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" constant="1" id="ZLa-di-eEv"/>
+                            <constraint firstItem="wg1-v3-iHq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" constant="1" id="dJt-u5-Q7G"/>
                             <constraint firstItem="HnZ-dR-5Qg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jLD-2d-nsy"/>
                             <constraint firstItem="nBq-m8-ydq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" constant="1" id="nyT-Az-pNM"/>
                             <constraint firstItem="nBq-m8-ydq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oyd-yV-29a"/>
+                            <constraint firstItem="wg1-v3-iHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xms-PK-5Du"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
