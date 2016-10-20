@@ -38,11 +38,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self.cupNumLabel.setText("0")
         case "1":
             self.cupNumLabel.setText("1")
-            WKInterfaceDevice.current().play(WKHapticType.retry)
+            vibrateWatch(vibrateNum: 1)
         case "2":
             self.cupNumLabel.setText("2")
+            vibrateWatch(vibrateNum: 2)
         case "3":
             self.cupNumLabel.setText("3")
+            vibrateWatch(vibrateNum: 3)
         default:
             break
         }
@@ -58,6 +60,28 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             DispatchQueue.main.async {
                 self.cupNumChange(cupNum: value)
             }
+        }
+    }
+    
+    func vibrateWatch(vibrateNum: Int) {
+        switch vibrateNum {
+        case 1:
+            WKInterfaceDevice.current().play(WKHapticType.retry)
+        case 2:
+            WKInterfaceDevice.current().play(WKHapticType.retry)
+            DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
+                WKInterfaceDevice.current().play(WKHapticType.retry)
+            }
+        case 3:
+            WKInterfaceDevice.current().play(WKHapticType.retry)
+            DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
+                WKInterfaceDevice.current().play(WKHapticType.retry)
+            }
+            DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+                WKInterfaceDevice.current().play(WKHapticType.retry)
+            }
+        default:
+            break
         }
     }
 }
