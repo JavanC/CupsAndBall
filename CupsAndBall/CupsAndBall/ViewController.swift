@@ -26,6 +26,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func touchUpCup1Button(_ sender: AnyObject) {
         print("Cup 1")
         sentCupNum(cupNum: "1")
