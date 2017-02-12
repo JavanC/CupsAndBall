@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,45 +22,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-dR-5Qg">
-                                <state key="normal" title="Cup1"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-dR-5Qg">
+                                <rect key="frame" x="145.5" y="166.5" width="47" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Cup"/>
                                 <connections>
-                                    <action selector="touchUpCup1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIW-xU-NwA"/>
+                                    <action selector="didClickCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5U-Oh-hzA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72f-Ea-WQm">
-                                <state key="normal" title="Cup2"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72f-Ea-WQm">
+                                <rect key="frame" x="313.5" y="166.5" width="41" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ball"/>
                                 <connections>
-                                    <action selector="touchUpCup2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARf-dR-DoE"/>
+                                    <action selector="didClickCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Etd-Kq-Bbl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBq-m8-ydq">
-                                <state key="normal" title="Cup3"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBq-m8-ydq">
+                                <rect key="frame" x="478" y="166.5" width="47" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Cup"/>
                                 <connections>
-                                    <action selector="touchUpCup3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kTD-Qa-DlM"/>
+                                    <action selector="didClickCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FNR-Hy-abj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-v3-iHq">
-                                <state key="normal" title="No Cup"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-v3-iHq">
+                                <rect key="frame" x="604" y="28" width="35" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="touchUpNoCupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1j-jT-u0g"/>
+                                    <action selector="actionOKButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nml-aV-1wO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-Aj-yC9">
+                                <rect key="frame" x="554" y="78" width="93" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="actionRandomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZbJ-vk-xVV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZw-Ac-0F9">
+                                <rect key="frame" x="308.5" y="28" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="72f-Ea-WQm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1rF-Zj-qPQ"/>
-                            <constraint firstItem="72f-Ea-WQm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K8q-4A-veh"/>
-                            <constraint firstItem="HnZ-dR-5Qg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" constant="1" id="ZLa-di-eEv"/>
-                            <constraint firstItem="wg1-v3-iHq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" constant="1" id="dJt-u5-Q7G"/>
-                            <constraint firstItem="HnZ-dR-5Qg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jLD-2d-nsy"/>
-                            <constraint firstItem="nBq-m8-ydq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" constant="1" id="nyT-Az-pNM"/>
-                            <constraint firstItem="nBq-m8-ydq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oyd-yV-29a"/>
-                            <constraint firstItem="wg1-v3-iHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xms-PK-5Du"/>
+                            <constraint firstItem="wg1-v3-iHq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3TN-nD-2CT"/>
+                            <constraint firstItem="zZw-Ac-0F9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="718-CN-vPO"/>
+                            <constraint firstItem="zZw-Ac-0F9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UtC-Ng-xM9"/>
+                            <constraint firstItem="aGq-Aj-yC9" firstAttribute="top" secondItem="wg1-v3-iHq" secondAttribute="bottom" constant="8" id="YEo-pn-KGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wg1-v3-iHq" secondAttribute="trailing" constant="8" id="v3I-u5-HDk"/>
+                            <constraint firstItem="aGq-Aj-yC9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yzL-VC-oxN"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
+                    <connections>
+                        <outlet property="cup1Button" destination="HnZ-dR-5Qg" id="5aX-HY-0Bg"/>
+                        <outlet property="cup2Button" destination="72f-Ea-WQm" id="Inq-kG-dDv"/>
+                        <outlet property="cup3Button" destination="nBq-m8-ydq" id="YPn-mV-jGK"/>
+                        <outlet property="okButton" destination="wg1-v3-iHq" id="hfB-Fm-lS0"/>
+                        <outlet property="randomButton" destination="aGq-Aj-yC9" id="dpF-Zw-KGN"/>
+                        <outlet property="statusLabel" destination="zZw-Ac-0F9" id="QEx-UI-SQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
